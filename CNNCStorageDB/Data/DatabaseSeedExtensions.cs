@@ -9,6 +9,6 @@ namespace CNNCStorageDB.Data
 {
     public static class DatabaseSeedExtensions
     {
-       
+        
     }
 }
