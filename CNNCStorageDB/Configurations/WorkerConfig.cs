@@ -24,8 +24,10 @@ namespace CNNCStorageDB.Configurations
             builder.Property(w => w.Phone).IsRequired()
                                           .HasMaxLength(10);
             builder.Property(w => w.Birthdate).IsRequired();
-            builder.Property(w => w.Salary).IsRequired().HasDefaultValue(0);
-            builder.Property(w => w.Premium).IsRequired().HasDefaultValue(0);
+            builder.Property(w => w.Salary).IsRequired()
+                                           .HasDefaultValue(0);
+            builder.Property(w => w.Premium).IsRequired()
+                                            .HasDefaultValue(0);
         }
     }
 }
