@@ -9,6 +9,25 @@ namespace CNNCStorageDB.Data
 {
     public static class DatabaseSeedExtensions
     {
-        
+        //public static void SeedClients(this ModelBuilder modelBuilder)
+        //{
+
+        //}
+        //public static void SeedDepartments(this ModelBuilder modelBuilder)
+        //{
+
+        //}
+        //public static void SeedPositions(this ModelBuilder modelBuilder)
+        //{
+
+        //}
+        //public static void SeedProjects(this ModelBuilder modelBuilder)
+        //{
+
+        //}
+        //public static void SeedWorkers(this ModelBuilder modelBuilder)
+        //{
+
+        //}
     }
 }
