@@ -26,4 +26,5 @@ namespace CNNCStorageDB.Data
 
             //Configuration
         }
+    }
 }
