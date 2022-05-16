@@ -1,9 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CNNCStorageDB.Configurations;
+using Microsoft.EntityFrameworkCore;
 
 namespace CNNCStorageDB.Data
 {
@@ -22,9 +18,18 @@ namespace CNNCStorageDB.Data
             base.OnModelCreating(modelBuilder);
 
             //Seeds
-
+            modelBuilder.SeedDepartments();
+            modelBuilder.SeedPositions();
+            modelBuilder.SeedWorkers();
+            modelBuilder.SeedProjects();
+            modelBuilder.SeedClients();
 
             //Configuration
+            modelBuilder.ApplyConfiguration(new DepartmentConfig());
+            modelBuilder.ApplyConfiguration(new PositionConfig());
+            modelBuilder.ApplyConfiguration(new WorkerConfig());
+            modelBuilder.ApplyConfiguration(new ProjectConfig());
+            modelBuilder.ApplyConfiguration(new ClientConfig());
         }
     }
 }
