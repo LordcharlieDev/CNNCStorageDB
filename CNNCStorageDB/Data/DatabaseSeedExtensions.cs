@@ -31,8 +31,8 @@ namespace CNNCStorageDB.Data
         {
             modelBuilder.Entity<Worker>().HasData(new[]
             {
-                new {Id = 1, FirstName = "Roman", MiddleName = "Tomecher", LastName = "Mukolaiovych", Email = "romantomechek@gmail.com", Phone = "+380678965789", PositionId = 3, Birthdate = DateTime.UtcNow, Salary = 3500m, Premium = 0m },
-                new {Id = 2, FirstName = "Oksana", MiddleName = "Stepanchuk", LastName = "Vadymivna", Email = "oksanastepanchuk@gmail.com", Phone = "+380938965789", PositionId = 5, Birthdate = DateTime.UtcNow, Salary = 1000m, Premium = 0m }
+                new {Id = 1, FirstName = "Roman", MiddleName = "Tomecher", LastName = "Mukolaiovych", Email = "romantomechek@gmail.com", Phone = "+380678965789", PositionId = 3, Birthdate = DateTime.UtcNow, Salary = 3500m, Premium = 0m, LocationId = "1"},
+                new {Id = 2, FirstName = "Oksana", MiddleName = "Stepanchuk", LastName = "Vadymivna", Email = "oksanastepanchuk@gmail.com", Phone = "+380938965789", PositionId = 5, Birthdate = DateTime.UtcNow, Salary = 1000m, Premium = 0m, LocationId = "1"}
             });
         }
         public static void SeedProjects(this ModelBuilder modelBuilder)
