@@ -22,6 +22,7 @@ namespace CNNCStorageDB.Models
         public decimal Salary { get; set; }
         public decimal Premium { get; set; }
 
+        public Location Location { get; set; }
         public Position Position { get; set; }
         public ICollection<Project> Projects { get; set; }
     }
