@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CNNCStorageDB.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,11 @@ namespace CNNCStorageDB
 {
     public class CNNCDbQueries
     {
+        private readonly CNNCDbContext db;
 
+        public CNNCDbQueries(CNNCDbContext context)
+        {
+            db = context;
+        }
     }
 }
