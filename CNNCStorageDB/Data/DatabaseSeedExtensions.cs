@@ -48,11 +48,21 @@ namespace CNNCStorageDB.Data
 {
                 new {Id = 1, FullName = "US Commercial Freight - Rochester, NY Location", Address = " 333 Hollenbeck St, Rochester, NY 14621, US", Email = "uacommercialfreightrochester@gmail.com", Phone = "+15852661404" }
             });
-        }public static void SeedUsers(this ModelBuilder modelBuilder)
+        }
+        public static void SeedUsers(this ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>().HasData(new[]
 {
                 new { Id = 1, Login = "admin", Password = "admin" }
+            });
+        }
+        public static void SeedLocations(this ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Location>().HasData(new[]
+{
+                new { Id = 1, Name = "Remote" },
+                new { Id = 2, Name = "Rivne" },
+                new { Id = 3, Name = "Lviv" }
             });
         }
     }

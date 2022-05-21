@@ -23,6 +23,8 @@ namespace CNNCStorageDB.Data
             modelBuilder.SeedWorkers();
             modelBuilder.SeedProjects();
             modelBuilder.SeedClients();
+            modelBuilder.SeedUsers();
+            modelBuilder.SeedLocations();
 
             //Configuration
             modelBuilder.ApplyConfiguration(new DepartmentConfig());
@@ -30,6 +32,8 @@ namespace CNNCStorageDB.Data
             modelBuilder.ApplyConfiguration(new WorkerConfig());
             modelBuilder.ApplyConfiguration(new ProjectConfig());
             modelBuilder.ApplyConfiguration(new ClientConfig());
+            modelBuilder.ApplyConfiguration(new UserConfig());
+            modelBuilder.ApplyConfiguration(new LocationConfig());
         }
     }
 }
