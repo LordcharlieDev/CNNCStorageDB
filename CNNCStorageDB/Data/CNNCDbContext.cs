@@ -1,4 +1,5 @@
 ﻿using CNNCStorageDB.Configurations;
+using CNNCStorageDB.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace CNNCStorageDB.Data
@@ -17,15 +18,6 @@ namespace CNNCStorageDB.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            //Seeds
-            modelBuilder.SeedDepartments();
-            modelBuilder.SeedPositions();
-            modelBuilder.SeedWorkers();
-            modelBuilder.SeedProjects();
-            modelBuilder.SeedClients();
-            modelBuilder.SeedUsers();
-            modelBuilder.SeedLocations();
-
             //Configuration
             modelBuilder.ApplyConfiguration(new DepartmentConfig());
             modelBuilder.ApplyConfiguration(new PositionConfig());
@@ -34,6 +26,22 @@ namespace CNNCStorageDB.Data
             modelBuilder.ApplyConfiguration(new ClientConfig());
             modelBuilder.ApplyConfiguration(new UserConfig());
             modelBuilder.ApplyConfiguration(new LocationConfig());
+
+            //Seeds
+            modelBuilder.SeedDepartments();
+            modelBuilder.SeedPositions();
+            modelBuilder.SeedWorkers();
+            modelBuilder.SeedProjects();
+            modelBuilder.SeedClients();
+            modelBuilder.SeedUsers();
+            modelBuilder.SeedLocations();
         }
+        public DbSet<Department> Departments { get; set; }
+        public DbSet<Position> Positions { get; set; }
+        public DbSet<Worker> Workers { get; set; }
+        public DbSet<Project> Projects { get; set; }
+        public DbSet<Client> Clients { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Location> Locations { get; set; }
     }
 }
