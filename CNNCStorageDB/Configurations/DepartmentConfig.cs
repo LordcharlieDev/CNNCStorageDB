@@ -16,10 +16,5 @@ namespace CNNCStorageDB.Configurations
             builder.Property(d => d.Name).IsRequired()
                                          .HasMaxLength(100);
         }
-
-        public void Configure(EntityTypeBuilder<Department> builder)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

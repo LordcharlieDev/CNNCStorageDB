@@ -13,7 +13,7 @@ namespace CNNCStorageDB.Configurations
     {
         public void Configure(EntityTypeBuilder<Worker> builder)
         {
-            builder.Property(w => w.FirsName).IsRequired()
+            builder.Property(w => w.FirstName).IsRequired()
                                              .HasMaxLength(50);
             builder.Property(w => w.MiddleName).IsRequired()
                                              .HasMaxLength(100);
