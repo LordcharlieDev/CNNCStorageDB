@@ -43,5 +43,15 @@ namespace CNNCStorageDB
         {
             return db.Locations.ToList();
         }
+
+        public bool CheckUser(string login, string password)
+        {
+            var result = db.Users.Where(u => u.Login == login && u.Password == password).ToList().Count;
+            if (result == 1)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }
