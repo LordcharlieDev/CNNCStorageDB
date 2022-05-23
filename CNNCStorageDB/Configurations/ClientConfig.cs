@@ -20,7 +20,7 @@ namespace CNNCStorageDB.Configurations
             builder.Property(c => c.Email).IsRequired()
                                           .HasMaxLength(100);
             builder.Property(c => c.Phone).IsRequired()
-                                          .HasMaxLength(10);
+                                          .HasMaxLength(13);
         }
     }
 }

@@ -22,7 +22,7 @@ namespace CNNCStorageDB.Configurations
             builder.Property(w => w.Email).IsRequired()
                                           .HasMaxLength(100);
             builder.Property(w => w.Phone).IsRequired()
-                                          .HasMaxLength(10);
+                                          .HasMaxLength(13);
             builder.Property(w => w.Birthdate).IsRequired();
             builder.Property(w => w.Salary).IsRequired()
                                            .HasDefaultValue(0);
