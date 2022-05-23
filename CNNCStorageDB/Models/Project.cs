@@ -18,7 +18,7 @@ namespace CNNCStorageDB.Models
         public int Budget { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
-        public double FinalPrice { get; set; }
+        public int FinalPrice { get; set; }
 
         public ICollection<Client> Clients { get; set; }
         public ICollection<Worker> Workers { get; set; }

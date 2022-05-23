@@ -20,7 +20,7 @@ namespace CNNCStorageDB.Models
         public string Phone { get; set; }
         public DateTime Birthdate { get; set; }
         public int Salary { get; set; }
-        public double Premium { get; set; }
+        public int Premium { get; set; }
 
         public Location Location { get; set; }
         public Position Position { get; set; }
