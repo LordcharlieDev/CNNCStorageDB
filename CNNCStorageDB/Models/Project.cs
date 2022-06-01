@@ -23,7 +23,7 @@ namespace CNNCStorageDB.Models
         [DisplayName("Final price")]
         public int FinalPrice { get; set; }
 
-        public Client Clients { get; set; }
+        public Client Client { get; set; }
         public ICollection<Worker> Workers { get; set; }
     }
 }
