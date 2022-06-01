@@ -16,7 +16,7 @@ namespace CNNCStorageDB.Configurations
             builder.Property(u => u.Login).IsRequired()
                                  .HasMaxLength(100);
             builder.Property(u => u.Password).IsRequired()
-                                          .HasMaxLength(32);
+                                             .HasMaxLength(32);
             builder.Property(u => u.IsAdmin).IsRequired();
         }
     }

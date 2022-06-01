@@ -61,7 +61,7 @@ namespace CNNCStorageDB.Migrations
                             Address = " 333 Hollenbeck St, Rochester, NY 14621, US",
                             Email = "uacommercialfreightrochester@gmail.com",
                             FullName = "US Commercial Freight - Rochester, NY Location",
-                            Phone = "+1585266"
+                            Phone = "+158526625744"
                         });
                 });
 
@@ -195,8 +195,50 @@ namespace CNNCStorageDB.Migrations
                         new
                         {
                             Id = 5,
-                            DepartmentId = 3,
+                            DepartmentId = 2,
                             Name = "HR manager"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            DepartmentId = 1,
+                            Name = "Team Lead"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            DepartmentId = 1,
+                            Name = "Product Manager"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            DepartmentId = 1,
+                            Name = "Project Manager"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            DepartmentId = 3,
+                            Name = "Marketer"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            DepartmentId = 3,
+                            Name = "PR manager"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            DepartmentId = 4,
+                            Name = "Warehouse manager"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            DepartmentId = 5,
+                            Name = "Иookkeeper"
                         });
                 });
 
@@ -219,7 +261,7 @@ namespace CNNCStorageDB.Migrations
                     b.Property<DateTime>("EndTime")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 6, 1, 16, 23, 38, 141, DateTimeKind.Local).AddTicks(156));
+                        .HasDefaultValue(new DateTime(2022, 6, 1, 19, 13, 33, 611, DateTimeKind.Local).AddTicks(8714));
 
                     b.Property<int>("FinalPrice")
                         .ValueGeneratedOnAdd()
@@ -233,7 +275,7 @@ namespace CNNCStorageDB.Migrations
                     b.Property<DateTime>("StartTime")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 6, 1, 15, 23, 38, 140, DateTimeKind.Local).AddTicks(9950));
+                        .HasDefaultValue(new DateTime(2022, 6, 1, 18, 13, 33, 611, DateTimeKind.Local).AddTicks(8514));
 
                     b.HasKey("Id");
 
@@ -247,10 +289,10 @@ namespace CNNCStorageDB.Migrations
                             Id = 1,
                             Budget = 100000,
                             ClientId = 1,
-                            EndTime = new DateTime(2022, 6, 1, 15, 23, 38, 141, DateTimeKind.Local).AddTicks(979),
+                            EndTime = new DateTime(2022, 6, 1, 18, 13, 33, 611, DateTimeKind.Local).AddTicks(9633),
                             FinalPrice = 99880,
                             Name = "Phone caller for own workers",
-                            StartTime = new DateTime(2021, 12, 1, 15, 23, 38, 141, DateTimeKind.Local).AddTicks(977)
+                            StartTime = new DateTime(2021, 12, 1, 18, 13, 33, 611, DateTimeKind.Local).AddTicks(9625)
                         });
                 });
 
@@ -261,6 +303,9 @@ namespace CNNCStorageDB.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<bool>("IsAdmin")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Login")
                         .IsRequired()
@@ -280,8 +325,37 @@ namespace CNNCStorageDB.Migrations
                         new
                         {
                             Id = 1,
-                            Login = "admin",
-                            Password = "admin"
+                            IsAdmin = true,
+                            Login = "administrator",
+                            Password = "F@1ders1"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            IsAdmin = false,
+                            Login = "Oksana.Stepanchuk",
+                            Password = "Oksana123"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            IsAdmin = false,
+                            Login = "Inna.Koltaniuk",
+                            Password = "Inna1234"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            IsAdmin = false,
+                            Login = "Katia.Tomecher",
+                            Password = "Katia123"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            IsAdmin = false,
+                            Login = "Sasha.Melnik",
+                            Password = "Sasha123"
                         });
                 });
 
@@ -349,28 +423,70 @@ namespace CNNCStorageDB.Migrations
                         new
                         {
                             Id = 1,
-                            Birthdate = new DateTime(2022, 6, 1, 15, 23, 38, 141, DateTimeKind.Local).AddTicks(953),
+                            Birthdate = new DateTime(2000, 12, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "romantomechek@gmail.com",
                             FirstName = "Roman",
                             LastName = "Mukolaiovych",
                             LocationId = 1,
                             MiddleName = "Tomecher",
                             Phone = "+380678965789",
-                            PositionId = 3,
+                            PositionId = 1,
                             Premium = 0,
                             Salary = 3500
                         },
                         new
                         {
                             Id = 2,
-                            Birthdate = new DateTime(2022, 6, 1, 15, 23, 38, 141, DateTimeKind.Local).AddTicks(961),
+                            Birthdate = new DateTime(1995, 12, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "oksanastepanchuk@gmail.com",
                             FirstName = "Oksana",
                             LastName = "Vadymivna",
                             LocationId = 1,
                             MiddleName = "Stepanchuk",
                             Phone = "+380938965789",
-                            PositionId = 5,
+                            PositionId = 2,
+                            Premium = 0,
+                            Salary = 1000
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Birthdate = new DateTime(1993, 6, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "innakoltaniuk@gmail.com",
+                            FirstName = "Inna",
+                            LastName = "Mykolaivna",
+                            LocationId = 2,
+                            MiddleName = "Koltaniuk",
+                            Phone = "+380938467895",
+                            PositionId = 2,
+                            Premium = 0,
+                            Salary = 1000
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Birthdate = new DateTime(1997, 7, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "katiatomecher@gmail.com",
+                            FirstName = "Katia",
+                            LastName = "Oleksiivna",
+                            LocationId = 2,
+                            MiddleName = "Tomecher",
+                            Phone = "+380684579512",
+                            PositionId = 2,
+                            Premium = 0,
+                            Salary = 1000
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Birthdate = new DateTime(1999, 8, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "sashamelnik@gmail.com",
+                            FirstName = "Sasha",
+                            LastName = "Artemivna",
+                            LocationId = 3,
+                            MiddleName = "Melnik",
+                            Phone = "+380995467845",
+                            PositionId = 2,
                             Premium = 0,
                             Salary = 1000
                         });
