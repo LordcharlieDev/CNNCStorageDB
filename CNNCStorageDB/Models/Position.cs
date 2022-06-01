@@ -8,6 +8,10 @@ namespace CNNCStorageDB.Models
 {
     public class Position
     {
+        public Position()
+        {
+            Workers = new HashSet<Worker>();
+        }
         public int Id { get; set; }
         public string Name { get; set; }
 
