@@ -4,6 +4,7 @@ using CNNCStorageDB.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CNNCStorageDB.Migrations
 {
     [DbContext(typeof(CNNCDbContext))]
-    partial class CNNCDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220601071521_ChangeConfig")]
+    partial class ChangeConfig
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
