@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace CNNCStorageDB.Migrations
 {
-    public partial class createDb : Migration
+    public partial class createdb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -74,8 +74,8 @@ namespace CNNCStorageDB.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Budget = table.Column<int>(type: "int", nullable: false, defaultValue: 0),
-                    StartTime = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2022, 6, 1, 18, 13, 33, 611, DateTimeKind.Local).AddTicks(8514)),
-                    EndTime = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2022, 6, 1, 19, 13, 33, 611, DateTimeKind.Local).AddTicks(8714)),
+                    StartTime = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2022, 6, 1, 18, 25, 35, 188, DateTimeKind.Local).AddTicks(5405)),
+                    EndTime = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2022, 6, 1, 19, 25, 35, 188, DateTimeKind.Local).AddTicks(5627)),
                     FinalPrice = table.Column<int>(type: "int", nullable: false, defaultValue: 0),
                     ClientId = table.Column<int>(type: "int", nullable: false)
                 },
@@ -223,24 +223,24 @@ namespace CNNCStorageDB.Migrations
                     { 9, 3, "Marketer" },
                     { 10, 3, "PR manager" },
                     { 11, 4, "Warehouse manager" },
-                    { 12, 5, "Иookkeeper" }
+                    { 12, 5, "Bookkeeper" }
                 });
 
             migrationBuilder.InsertData(
                 table: "Projects",
                 columns: new[] { "Id", "Budget", "ClientId", "EndTime", "FinalPrice", "Name", "StartTime" },
-                values: new object[] { 1, 100000, 1, new DateTime(2022, 6, 1, 18, 13, 33, 611, DateTimeKind.Local).AddTicks(9633), 99880, "Phone caller for own workers", new DateTime(2021, 12, 1, 18, 13, 33, 611, DateTimeKind.Local).AddTicks(9625) });
+                values: new object[] { 1, 100000, 1, new DateTime(2022, 6, 1, 18, 25, 35, 188, DateTimeKind.Local).AddTicks(6619), 99880, "Phone caller for own workers", new DateTime(2021, 12, 1, 18, 25, 35, 188, DateTimeKind.Local).AddTicks(6612) });
 
             migrationBuilder.InsertData(
                 table: "Workers",
                 columns: new[] { "Id", "Birthdate", "Email", "FirstName", "LastName", "LocationId", "MiddleName", "Phone", "PositionId", "Salary" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2000, 12, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "romantomechek@gmail.com", "Roman", "Mukolaiovych", 1, "Tomecher", "+380678965789", 1, 3500 },
-                    { 2, new DateTime(1995, 12, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "oksanastepanchuk@gmail.com", "Oksana", "Vadymivna", 1, "Stepanchuk", "+380938965789", 2, 1000 },
-                    { 3, new DateTime(1993, 6, 6, 0, 0, 0, 0, DateTimeKind.Unspecified), "innakoltaniuk@gmail.com", "Inna", "Mykolaivna", 2, "Koltaniuk", "+380938467895", 2, 1000 },
-                    { 4, new DateTime(1997, 7, 24, 0, 0, 0, 0, DateTimeKind.Unspecified), "katiatomecher@gmail.com", "Katia", "Oleksiivna", 2, "Tomecher", "+380684579512", 2, 1000 },
-                    { 5, new DateTime(1999, 8, 30, 0, 0, 0, 0, DateTimeKind.Unspecified), "sashamelnik@gmail.com", "Sasha", "Artemivna", 3, "Melnik", "+380995467845", 2, 1000 }
+                    { 1, new DateTime(2000, 12, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "romantomechek@gmail.com", "Roman", "Mukolaiovych", 1, "Tomecher", "+380678965789", 3, 3500 },
+                    { 2, new DateTime(1995, 12, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "oksanastepanchuk@gmail.com", "Oksana", "Vadymivna", 1, "Stepanchuk", "+380938965789", 5, 1000 },
+                    { 3, new DateTime(1993, 6, 6, 0, 0, 0, 0, DateTimeKind.Unspecified), "innakoltaniuk@gmail.com", "Inna", "Mykolaivna", 2, "Koltaniuk", "+380938467895", 5, 1000 },
+                    { 4, new DateTime(1997, 7, 24, 0, 0, 0, 0, DateTimeKind.Unspecified), "katiatomecher@gmail.com", "Katia", "Oleksiivna", 2, "Tomecher", "+380684579512", 12, 1000 },
+                    { 5, new DateTime(1999, 8, 30, 0, 0, 0, 0, DateTimeKind.Unspecified), "sashamelnik@gmail.com", "Sasha", "Artemivna", 3, "Melnik", "+380995467845", 11, 1000 }
                 });
 
             migrationBuilder.CreateIndex(

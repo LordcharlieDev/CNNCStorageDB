@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CNNCStorageDB.Migrations
 {
     [DbContext(typeof(CNNCDbContext))]
-    [Migration("20220601151333_createDb")]
-    partial class createDb
+    [Migration("20220601152535_createdb")]
+    partial class createdb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -240,7 +240,7 @@ namespace CNNCStorageDB.Migrations
                         {
                             Id = 12,
                             DepartmentId = 5,
-                            Name = "Иookkeeper"
+                            Name = "Bookkeeper"
                         });
                 });
 
@@ -263,7 +263,7 @@ namespace CNNCStorageDB.Migrations
                     b.Property<DateTime>("EndTime")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 6, 1, 19, 13, 33, 611, DateTimeKind.Local).AddTicks(8714));
+                        .HasDefaultValue(new DateTime(2022, 6, 1, 19, 25, 35, 188, DateTimeKind.Local).AddTicks(5627));
 
                     b.Property<int>("FinalPrice")
                         .ValueGeneratedOnAdd()
@@ -277,7 +277,7 @@ namespace CNNCStorageDB.Migrations
                     b.Property<DateTime>("StartTime")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 6, 1, 18, 13, 33, 611, DateTimeKind.Local).AddTicks(8514));
+                        .HasDefaultValue(new DateTime(2022, 6, 1, 18, 25, 35, 188, DateTimeKind.Local).AddTicks(5405));
 
                     b.HasKey("Id");
 
@@ -291,10 +291,10 @@ namespace CNNCStorageDB.Migrations
                             Id = 1,
                             Budget = 100000,
                             ClientId = 1,
-                            EndTime = new DateTime(2022, 6, 1, 18, 13, 33, 611, DateTimeKind.Local).AddTicks(9633),
+                            EndTime = new DateTime(2022, 6, 1, 18, 25, 35, 188, DateTimeKind.Local).AddTicks(6619),
                             FinalPrice = 99880,
                             Name = "Phone caller for own workers",
-                            StartTime = new DateTime(2021, 12, 1, 18, 13, 33, 611, DateTimeKind.Local).AddTicks(9625)
+                            StartTime = new DateTime(2021, 12, 1, 18, 25, 35, 188, DateTimeKind.Local).AddTicks(6612)
                         });
                 });
 
@@ -432,7 +432,7 @@ namespace CNNCStorageDB.Migrations
                             LocationId = 1,
                             MiddleName = "Tomecher",
                             Phone = "+380678965789",
-                            PositionId = 1,
+                            PositionId = 3,
                             Premium = 0,
                             Salary = 3500
                         },
@@ -446,7 +446,7 @@ namespace CNNCStorageDB.Migrations
                             LocationId = 1,
                             MiddleName = "Stepanchuk",
                             Phone = "+380938965789",
-                            PositionId = 2,
+                            PositionId = 5,
                             Premium = 0,
                             Salary = 1000
                         },
@@ -460,7 +460,7 @@ namespace CNNCStorageDB.Migrations
                             LocationId = 2,
                             MiddleName = "Koltaniuk",
                             Phone = "+380938467895",
-                            PositionId = 2,
+                            PositionId = 5,
                             Premium = 0,
                             Salary = 1000
                         },
@@ -474,7 +474,7 @@ namespace CNNCStorageDB.Migrations
                             LocationId = 2,
                             MiddleName = "Tomecher",
                             Phone = "+380684579512",
-                            PositionId = 2,
+                            PositionId = 12,
                             Premium = 0,
                             Salary = 1000
                         },
@@ -488,7 +488,7 @@ namespace CNNCStorageDB.Migrations
                             LocationId = 3,
                             MiddleName = "Melnik",
                             Phone = "+380995467845",
-                            PositionId = 2,
+                            PositionId = 11,
                             Premium = 0,
                             Salary = 1000
                         });
