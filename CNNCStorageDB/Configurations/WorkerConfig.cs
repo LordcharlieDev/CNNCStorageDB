@@ -28,6 +28,7 @@ namespace CNNCStorageDB.Configurations
                                            .HasDefaultValue(0);
             builder.Property(w => w.Premium).IsRequired()
                                             .HasDefaultValue(0);
+            builder.Ignore(w => w.FullInfo);
         }
     }
 }

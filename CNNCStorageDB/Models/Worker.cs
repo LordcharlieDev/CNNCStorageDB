@@ -26,6 +26,7 @@ namespace CNNCStorageDB.Models
         public DateTime Birthdate { get; set; }
         public int Salary { get; set; }
         public int Premium { get; set; }
+        public string FullInfo => $"{Id} - {FirstName} {MiddleName} {LastName}";
 
         public Location Location { get; set; }
         public Position Position { get; set; }
