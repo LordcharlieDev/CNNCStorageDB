@@ -31,7 +31,7 @@ namespace CNNCStorageDB.Data
                 new{Id = 9, Name = "Marketer", DepartmentId = 3},
                 new{Id = 10, Name = "PR manager", DepartmentId = 3},
                 new{Id = 11, Name = "Warehouse manager", DepartmentId = 4},
-                new{Id = 12, Name = "Иookkeeper", DepartmentId = 5},
+                new{Id = 12, Name = "Bookkeeper", DepartmentId = 5},
             });
         }
         public static void SeedWorkers(this ModelBuilder modelBuilder)
