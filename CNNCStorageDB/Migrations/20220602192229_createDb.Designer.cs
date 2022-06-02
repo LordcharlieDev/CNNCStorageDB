@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CNNCStorageDB.Migrations
 {
     [DbContext(typeof(CNNCDbContext))]
-    [Migration("20220601152535_createdb")]
-    partial class createdb
+    [Migration("20220602192229_createDb")]
+    partial class createDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -174,7 +174,7 @@ namespace CNNCStorageDB.Migrations
                         {
                             Id = 1,
                             DepartmentId = 1,
-                            Name = "NodeJS Developer"
+                            Name = "Node.JS Developer"
                         },
                         new
                         {
@@ -241,6 +241,12 @@ namespace CNNCStorageDB.Migrations
                             Id = 12,
                             DepartmentId = 5,
                             Name = "Bookkeeper"
+                        },
+                        new
+                        {
+                            Id = 13,
+                            DepartmentId = 5,
+                            Name = "DevOps"
                         });
                 });
 
@@ -263,7 +269,7 @@ namespace CNNCStorageDB.Migrations
                     b.Property<DateTime>("EndTime")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 6, 1, 19, 25, 35, 188, DateTimeKind.Local).AddTicks(5627));
+                        .HasDefaultValue(new DateTime(2022, 6, 2, 23, 22, 29, 374, DateTimeKind.Local).AddTicks(235));
 
                     b.Property<int>("FinalPrice")
                         .ValueGeneratedOnAdd()
@@ -277,7 +283,7 @@ namespace CNNCStorageDB.Migrations
                     b.Property<DateTime>("StartTime")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 6, 1, 18, 25, 35, 188, DateTimeKind.Local).AddTicks(5405));
+                        .HasDefaultValue(new DateTime(2022, 6, 2, 22, 22, 29, 374, DateTimeKind.Local).AddTicks(74));
 
                     b.HasKey("Id");
 
@@ -291,10 +297,10 @@ namespace CNNCStorageDB.Migrations
                             Id = 1,
                             Budget = 100000,
                             ClientId = 1,
-                            EndTime = new DateTime(2022, 6, 1, 18, 25, 35, 188, DateTimeKind.Local).AddTicks(6619),
+                            EndTime = new DateTime(2022, 6, 2, 22, 22, 29, 374, DateTimeKind.Local).AddTicks(1203),
                             FinalPrice = 99880,
                             Name = "Phone caller for own workers",
-                            StartTime = new DateTime(2021, 12, 1, 18, 25, 35, 188, DateTimeKind.Local).AddTicks(6612)
+                            StartTime = new DateTime(2021, 12, 2, 22, 22, 29, 374, DateTimeKind.Local).AddTicks(1195)
                         });
                 });
 
@@ -428,9 +434,9 @@ namespace CNNCStorageDB.Migrations
                             Birthdate = new DateTime(2000, 12, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "romantomechek@gmail.com",
                             FirstName = "Roman",
-                            LastName = "Mukolaiovych",
+                            LastName = "Tomecher",
                             LocationId = 1,
-                            MiddleName = "Tomecher",
+                            MiddleName = "Mukolaiovych",
                             Phone = "+380678965789",
                             PositionId = 3,
                             Premium = 0,
@@ -442,9 +448,9 @@ namespace CNNCStorageDB.Migrations
                             Birthdate = new DateTime(1995, 12, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "oksanastepanchuk@gmail.com",
                             FirstName = "Oksana",
-                            LastName = "Vadymivna",
+                            LastName = "Stepanchuk",
                             LocationId = 1,
-                            MiddleName = "Stepanchuk",
+                            MiddleName = "Vadymivna",
                             Phone = "+380938965789",
                             PositionId = 5,
                             Premium = 0,
@@ -456,9 +462,9 @@ namespace CNNCStorageDB.Migrations
                             Birthdate = new DateTime(1993, 6, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "innakoltaniuk@gmail.com",
                             FirstName = "Inna",
-                            LastName = "Mykolaivna",
+                            LastName = "Koltaniuk",
                             LocationId = 2,
-                            MiddleName = "Koltaniuk",
+                            MiddleName = "Mykolaivna",
                             Phone = "+380938467895",
                             PositionId = 5,
                             Premium = 0,
@@ -470,9 +476,9 @@ namespace CNNCStorageDB.Migrations
                             Birthdate = new DateTime(1997, 7, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "katiatomecher@gmail.com",
                             FirstName = "Katia",
-                            LastName = "Oleksiivna",
+                            LastName = "Tomecher",
                             LocationId = 2,
-                            MiddleName = "Tomecher",
+                            MiddleName = "Oleksiivna",
                             Phone = "+380684579512",
                             PositionId = 12,
                             Premium = 0,
@@ -484,9 +490,9 @@ namespace CNNCStorageDB.Migrations
                             Birthdate = new DateTime(1999, 8, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "sashamelnik@gmail.com",
                             FirstName = "Sasha",
-                            LastName = "Artemivna",
+                            LastName = "Melnik",
                             LocationId = 3,
-                            MiddleName = "Melnik",
+                            MiddleName = "Artemivna",
                             Phone = "+380995467845",
                             PositionId = 11,
                             Premium = 0,
