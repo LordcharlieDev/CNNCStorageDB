@@ -8,7 +8,7 @@ CNNCDbContext db = new CNNCDbContext();
 
 CNNCDbQueries queries = new CNNCDbQueries(db);
 
-var result = queries.GetAllWorkers();
+var result = await queries.GetAllWorkers();
 
 foreach (var item in result)
 {
