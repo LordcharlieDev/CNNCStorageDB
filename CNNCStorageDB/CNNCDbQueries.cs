@@ -17,36 +17,40 @@ namespace CNNCStorageDB
         {
             db = context;
         }
-        public IEnumerable<Department> GetAllDepartments()
+        public async Task<IEnumerable<Department>> GetAllDepartments()
         {
-            return db.Departments.ToList();
+            return await db.Departments.ToListAsync();
         }
-        public IEnumerable<Position> GetAllPositions()
+        public async Task<IEnumerable<Position>> GetAllPositions()
         {
             return db.Positions.Include(p => p.Department).ToList();
         }
-        public IEnumerable<Worker> GetAllWorkers()
+        public async Task<IEnumerable<Worker>> GetAllWorkers()
         {
-            return db.Workers.Include(w => w.Position)
+            return await db.Workers.Include(w => w.Position)
                              .Include(w => w.Location)
-                             .ToList();
+                             .ToListAsync();
         }
-        public IEnumerable<Project> GetAllProjects()
+        public async Task<IEnumerable<Project>> GetAllProjects()
         {
             return db.Projects.ToList();
         }
-        public IEnumerable<Client> GetAllClients()
+        public async Task<IEnumerable<Client>> GetAllClients()
         {
             return db.Clients.ToList();
         }
-        public IEnumerable<Location> GetAllLocations()
+        public async Task<IEnumerable<Location>> GetAllLocations()
         {
             return db.Locations.ToList();
+        }        
+        public async Task<IEnumerable<User>> GetAllUsers()
+        {
+            return db.Users.ToList();
         }
 
-        public bool CheckUser(string login, string password)
+        public async Task<bool> CheckUser(string username, string password)
         {
-            var result = db.Users.Where(u => u.Login == login && u.Password == password).ToList().Count;
+            var result = db.Users.Where(u => u.Username == username && u.Password == password).ToList().Count;
             if (result == 1)
             {
                 return true;

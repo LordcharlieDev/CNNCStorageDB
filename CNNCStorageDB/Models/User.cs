@@ -9,11 +9,12 @@ namespace CNNCStorageDB.Models
 {
     public class User
     {
-
         public int Id { get; set; }
-        public string Login { get; set; }
-        [RegularExpression(@"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$")]
+        public string Username { get; set; }
+        [RegularExpression(@"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$", ErrorMessage = "The password does not meet the requirements.")]
         public string Password { get; set; }
         public bool IsAdmin { get; set; }
+        public int WorkerId { get; set; }
+
     }
 }

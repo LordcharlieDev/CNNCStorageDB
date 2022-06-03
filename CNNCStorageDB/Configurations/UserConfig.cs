@@ -13,7 +13,7 @@ namespace CNNCStorageDB.Configurations
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
-            builder.Property(u => u.Login).IsRequired()
+            builder.Property(u => u.Username).IsRequired()
                                  .HasMaxLength(100);
             builder.Property(u => u.Password).IsRequired()
                                              .HasMaxLength(32);

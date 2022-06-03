@@ -33,5 +33,6 @@ namespace CNNCStorageDB.Models
         public Location Location { get; set; }
         public Position Position { get; set; }
         public ICollection<Project> Projects { get; set; }
+
     }
 }
