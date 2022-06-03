@@ -64,10 +64,10 @@ namespace CNNCStorageDB.Data
         {
             modelBuilder.Entity<User>().HasData(new[]
 {
-                new { Id = 1, Username = "administrator",     Password = "F@1ders1",  IsAdmin = true, WorkerId = 1},
-                new { Id = 2, Username = "Oksana.Stepanchuk", Password = "Oksana123", IsAdmin = false, WorkerId = 2},
-                new { Id = 3, Username = "Inna.Koltaniuk",    Password = "Inna1234",  IsAdmin = false, WorkerId = 3},
-                new { Id = 4, Username = "Katia.Tomecher",    Password = "Katia123",  IsAdmin = false, WorkerId = 4},
+                new { Id = 1, Username = "administrator",     Password = "F@1ders1",  IsAdmin = true},
+                new { Id = 2, Username = "Oksana.Stepanchuk", Password = "Oksana123", IsAdmin = false},
+                new { Id = 3, Username = "Inna.Koltaniuk",    Password = "Inna1234",  IsAdmin = false},
+                new { Id = 4, Username = "Katia.Tomecher",    Password = "Katia123",  IsAdmin = false},
             }); ;
         }
         public static void SeedLocations(this ModelBuilder modelBuilder)

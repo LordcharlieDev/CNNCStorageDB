@@ -14,7 +14,6 @@ namespace CNNCStorageDB.Models
         [RegularExpression(@"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$", ErrorMessage = "The password does not meet the requirements.")]
         public string Password { get; set; }
         public bool IsAdmin { get; set; }
-        public int WorkerId { get; set; }
 
     }
 }
