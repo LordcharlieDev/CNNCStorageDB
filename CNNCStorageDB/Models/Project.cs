@@ -16,12 +16,12 @@ namespace CNNCStorageDB.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public int Budget { get; set; }
-        [DisplayName("Start time")]
-        public DateTime StartTime { get; set; }
-        [DisplayName("End time")]
-        public DateTime EndTime { get; set; }
-        [DisplayName("Final price")]
-        public int FinalPrice { get; set; }
+        [DisplayName("Start date")]
+        public DateTime StartDate { get; set; }
+        [DisplayName("End date")]
+        public DateTime EndDate { get; set; }
+        [DisplayName("Final cost")]
+        public int FinalCost { get; set; }
 
         public Client Client { get; set; }
         public ICollection<Worker> Workers { get; set; }

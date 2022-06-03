@@ -50,7 +50,7 @@ namespace CNNCStorageDB.Data
         {
             modelBuilder.Entity<Project>().HasData(new[]
             {
-                new{Id = 1, Name = "Phone caller for own workers", Budget = 100000, StartTime = DateTime.Now.AddMonths(-6), EndTime = DateTime.Now, FinalPrice = 101500, ClientId = 1},
+                new{Id = 1, Name = "Phone caller for own workers", Budget = 100000, StartDate = DateTime.Now.AddMonths(-6), EndDate = DateTime.Now, FinalCost = 101500, ClientId = 1},
             });
         }
         public static void SeedClients(this ModelBuilder modelBuilder)
