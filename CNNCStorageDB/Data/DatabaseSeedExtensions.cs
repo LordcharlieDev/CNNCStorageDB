@@ -20,7 +20,7 @@ namespace CNNCStorageDB.Data
         {
             modelBuilder.Entity<Position>().HasData(new[]
             {
-                new{Id = 1, Name = "NodeJS Developer", DepartmentId = 1},
+                new{Id = 1, Name = "Node.JS Developer", DepartmentId = 1},
                 new{Id = 2, Name = "React.JS Developer", DepartmentId = 1},
                 new{Id = 3, Name = "Fullstack .NET Developer", DepartmentId = 1},
                 new{Id = 4, Name = "Fullstack React.JS, Node.JS Developer", DepartmentId = 1},

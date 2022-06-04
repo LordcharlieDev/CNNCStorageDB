@@ -21,12 +21,14 @@ namespace CNNCStorageDB.Models
         public string MiddleName { get; set; }
         [DisplayName("Last name")]
         public string LastName { get; set; }
-        [RegularExpression(@"[a-z0-9]+(?:\.[a-z0-9]+)*@(?:[a-z0-9](?:[a-z0-9]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9]*[a-z0-9])?")]
+        [RegularExpression(@"[a-z0-9]+(?:\.[a-z0-9]+)*@(?:[a-z0-9](?:[a-z0-9]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9]*[a-z0-9])?", ErrorMessage = "The email does not meet the requirements.")]
         public string Email { get; set; }
-        [RegularExpression(@"^\s*(?:\+?(\d{1,3}))?([-. (]*(\d{3})[-. )]*)?((\d{3})[-. ]*(\d{2,4})(?:[-.x ]*(\d+))?)\s*$")]
+        [RegularExpression(@"^\s*(?:\+?(\d{1,3}))?([-. (]*(\d{3})[-. )]*)?((\d{3})[-. ]*(\d{2,4})(?:[-.x ]*(\d+))?)\s*$", ErrorMessage = "The phone does not meet the requirements.")]
         public string Phone { get; set; }
         public DateTime Birthdate { get; set; }
+        [Range(1, 100000, ErrorMessage = "Salary must be greater than 0")]
         public int Salary { get; set; }
+        [Range(0, 100, ErrorMessage = "Premium must be a positive number")]
         public int Premium { get; set; }
         public string FullInfo => $"{Id} - {FirstName} {MiddleName} {LastName}";
 
