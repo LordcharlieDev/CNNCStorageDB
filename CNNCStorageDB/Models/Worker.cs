@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CNNCStorageDB.Validations;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -30,6 +31,8 @@ namespace CNNCStorageDB.Models
         public int Salary { get; set; }
         [Range(0, 100, ErrorMessage = "Premium must be a positive number")]
         public int Premium { get; set; }
+        [DateValidation(ErrorMessage = "The date must be correct!")]
+        public DateTime DateOfEmployment { get; set; }
         public string FullInfo => $"{Id} - {FirstName} {MiddleName} {LastName}";
 
         public Location Location { get; set; }
