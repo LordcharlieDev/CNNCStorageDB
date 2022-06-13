@@ -34,15 +34,15 @@ namespace CNNCStorageDB.Models
         public bool Army { get; set; }
         [MaxLength(20)]
         public string Passport { get; set; }
-        [DisplayName("Marital status")]
         public string Sex { get; set; }
+        [DisplayName("Marital status")]
         public string MaritalStatus { get; set; }
-        [Range(1, 100, ErrorMessage = "Digit must be greater than or equal 0")]
+        [Range(0, 100, ErrorMessage = "Digit must be more than or equal 0")]
         [DisplayName("Number of childrens")]
         public int Childrens { get; set; }
-        [Range(1, 100000, ErrorMessage = "Salary must be greater than 0")]
+        [Range(1, 100000, ErrorMessage = "Salary must be more than 0 and less than 100000")]
         public int Salary { get; set; }
-        [Range(0, 100, ErrorMessage = "Premium must be a positive number")]
+        [Range(0, 100, ErrorMessage = "Premium must be more than 0 and less than 100")]
         public int Premium { get; set; }
         [DateValidation(ErrorMessage = "The date must be correct!")]
         [DisplayName("Date of emploment")]
