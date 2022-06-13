@@ -29,6 +29,18 @@ namespace CNNCStorageDB.Models
         public string Phone { get; set; }
         [DateValidation(ErrorMessage = "The date must be correct!")]
         public DateTime Birthdate { get; set; }
+        [MaxLength(300)]
+        public string Address { get; set; }
+        [MaxLength(5)]
+        public bool Army { get; set; }
+        [MaxLength(20)]
+        public string Passport { get; set; }
+        [DisplayName("Marital status")]
+        public string Sex { get; set; }
+        public string MaritalStatus { get; set; }
+        [Range(1, 100, ErrorMessage = "Digit must be greater than or equal 0")]
+        [DisplayName("Number of childrens")]
+        public int Childrens { get; set; }
         [Range(1, 100000, ErrorMessage = "Salary must be greater than 0")]
         public int Salary { get; set; }
         [Range(0, 100, ErrorMessage = "Premium must be a positive number")]
