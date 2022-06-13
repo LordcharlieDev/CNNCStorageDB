@@ -13,8 +13,8 @@ namespace CNNCStorageDB.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            //optionsBuilder.UseSqlServer(@"workstation id=CNNCStorageDb.mssql.somee.com;packet size=4096;user id=lordcharlie_SQLLogin_1;pwd=qhgjyc15ca;data source=CNNCStorageDb.mssql.somee.com;persist security info=False;initial catalog=CNNCStorageDb");
-            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-SEGB2UP;Initial catalog = CNNCDb;Integrated Security=True;Connect Timeout=5;");
+            optionsBuilder.UseSqlServer(@"workstation id=CNNCStorageDb.mssql.somee.com;packet size=4096;user id=lordcharlie_SQLLogin_1;pwd=qhgjyc15ca;data source=CNNCStorageDb.mssql.somee.com;persist security info=False;initial catalog=CNNCStorageDb");
+            //optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-SEGB2UP;Initial catalog = CNNCDb;Integrated Security=True;Connect Timeout=5;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

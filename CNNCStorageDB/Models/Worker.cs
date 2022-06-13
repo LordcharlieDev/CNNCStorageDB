@@ -31,7 +31,6 @@ namespace CNNCStorageDB.Models
         public DateTime Birthdate { get; set; }
         [MaxLength(300)]
         public string Address { get; set; }
-        [MaxLength(5)]
         public bool Army { get; set; }
         [MaxLength(20)]
         public string Passport { get; set; }
