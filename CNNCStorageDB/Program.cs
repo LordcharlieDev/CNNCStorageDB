@@ -1,16 +1,22 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using CNNCStorageDB;
 using CNNCStorageDB.Data;
 using Microsoft.EntityFrameworkCore;
 
-Console.WriteLine($"{DateTime.Now.AddHours(8)}");
+Console.WriteLine($"{DateTime.Now}");
 
 CNNCDbContext db = new CNNCDbContext();
 
-
-var result = await db.Departments.ToListAsync();
-
-foreach (var item in result)
+try
 {
-    Console.WriteLine($"{item.Name}");
+
+    var result = await db.Departments.ToListAsync();
+    foreach (var item in result)
+    {
+        Console.WriteLine($"{item.Name}");
+    }
+}
+catch (Exception ex)
+{
+
+    Console.WriteLine(ex.Message);
 }
