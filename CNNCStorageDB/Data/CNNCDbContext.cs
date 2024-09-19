@@ -16,7 +16,6 @@ namespace CNNCStorageDB.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            //optionsBuilder.UseSqlServer(@"workstation id=CNNCStorage.mssql.somee.com;packet size=4096;user id=lordcharlie_SQLLogin_1;pwd=7xggr58ggq;data source=CNNCStorage.mssql.somee.com;persist security info=False;initial catalog=CNNCStorage");
             optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-SEGB2UP;Initial catalog = CNNCDb;Integrated Security=True;Connect Timeout=5;"); //desktop
             //optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-5D1R5GU;Initial catalog = CNNCDb;Integrated Security=True;Connect Timeout=5;"); //laptop
         }
